@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="header">
+    <span>{{pageHeading}} Info</span>
+  </div>
+  <div class="form">
+    <form (ngSubmit)="saveItem(form)" [formGroup]="form" class="form">
+      <div class="input-1">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput name="name" formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Category</mat-label>
+          <mat-select name="category" formControlName="category" required>
+            @for (category of categories; track $index) {
+              <mat-option [value]="category.name">{{category.name}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="input-2">
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea matInput name="description" formControlName="description" cols="8" rows="8" required></textarea>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

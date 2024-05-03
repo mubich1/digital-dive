@@ -1,0 +1,28 @@
+.main{
+  margin: 20px;
+  .header{
+    text-align: center;
+    background: #c4c2c2;
+    padding: 20px;
+    font-size: 26px;
+  }
+  .form{
+
+
+    margin: 20px;
+    .input-1{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      mat-form-field{
+        width: 45%;
+      }
+    }
+    .input-2{
+      mat-form-field{
+        width: 100%;
+
+      }
+    }
+  }
+}
